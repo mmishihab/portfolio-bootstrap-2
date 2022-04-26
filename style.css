@@ -7,9 +7,10 @@
 3.Banner
 4.About
 5.Services
-6.Blogs
-7.Contact
-8.Footer 
+6.Portfolio
+7.Blogs
+8.Contact
+9.Footer 
 
 -------------------------------------*/
 
@@ -297,8 +298,157 @@ p {
   box-shadow: 0 0.9375rem 1.875rem rgba(77, 87, 222, 0.3);
   background-color: var(--bg-white);
 }
-/* 6.Blogs */
 
-/* 7.Contact */
+/* 6.Portfolio */
+.portfolio-wrapper .nav-link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-right: 0.35rem;
+  color: var(--text-black);
+  text-transform: uppercase;
+  padding: 0.3rem 2rem;
+}
+.portfolio-wrapper .nav-link.active {
+  color: var(--secondary-text);
+  background-color: var(--bg-gray);
+}
 
-/* 8.Footer  */
+.portfolio-wrapper .portfolio-img {
+  position: relative;
+  cursor: pointer;
+}
+.portfolio-wrapper .portfolio-img .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -moz-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.portfolio-wrapper .portfolio-img:hover .overlay {
+  background: rgba(77, 87, 222, 0.5);
+}
+.portfolio-wrapper .portfolio-img .overlay i {
+  font-size: 6.25rem;
+  color: var(--text-white);
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  -moz-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.portfolio-wrapper .portfolio-img:hover .overlay i {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+  left: 50%;
+}
+/* 7.Blogs */
+
+.blog-wrapper .card {
+  position: relative;
+  cursor: pointer;
+}
+.blog-wrapper .blog-details {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  background-color: rgba(34, 34, 34, 0.8);
+  color: var(--text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-transition: all 0.3s linear 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.blog-wrapper .card:hover .blog-details {
+  background-color: rgba(68, 88, 220, 0.85);
+}
+.blog-wrapper .border-line {
+  margin: 0.625rem 0;
+  background-color: var(--bg-white);
+  width: 100%;
+  height: 0.225rem;
+}
+/* 8.Contact */
+.footer-wrapper .newsletter {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/subscribe-bg.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 9.375rem 0;
+}
+.footer-wrapper input {
+  line-height: 3rem;
+  padding: 0 1.5625rem;
+  border: 0.125rem solid var(--bg-white);
+  background: transparent;
+  font-weight: 400;
+  border-radius: 0.3125rem;
+  color: var(--text-white);
+}
+
+.footer-wrapper .form-control:focus {
+  color: var(--text-white);
+  background-color: transparent;
+  border-color: var(--bg-white);
+  outline: 0;
+  box-shadow: none;
+}
+
+.footer-wrapper .form-control::placeholder {
+  color: var(--text-white);
+}
+
+/* 9.Footer  */
+
+.footer-wrapper .footer-logo img {
+  width: 12.5rem;
+  height: auto;
+}
+
+.footer-wrapper .social-icons li {
+  margin: 0.375rem;
+}
+.footer-wrapper .social-icons li a {
+  line-height: 1.875rem;
+  font-size: 1.5625rem;
+  display: inline-block;
+  color: var(--text-black);
+  text-align: center;
+  margin: 0 0.625rem;
+}
+.footer-wrapper .social-icons li a:hover {
+  color: var(--primary-color);
+}
+.footer-wrapper .footer-text {
+  font-size: 0.6875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+.footer-wrapper .footer-text a {
+  color: var(--primary-color);
+}
